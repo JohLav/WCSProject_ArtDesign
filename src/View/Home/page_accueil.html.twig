@@ -1,0 +1,120 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/public/assets/css/style.css">:
+    <title>Page d'accueil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+    <style>
+        .carousel img {
+            /* Change the height value to adjust the vertical size of the images */
+            height: 400px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+<h2>Bienvenue sur ArtDesign !</h2>
+<h3>Retrouvez toute l'info sur les expositions tendances, éphémères, intemporelles d’art et de design à Lyon.</h3>
+<h6>Votre évènement en un clic!</h6>
+
+
+<form action="POST">
+
+
+    <section>
+        <label for="event"></label>
+        <select id="event" name="event" class="form-select">
+            <option value="musées">Musées</option>
+            <option value="expoTemporaires">Expo temporaires</option>
+            <option value="galeriesArt"selected>Galeries d'art</option>
+        </select>
+
+        <div "form-select"></div>
+        <label for="place"></label>
+        <select class="form-select" name="place" required aria-label="Arrondissement">
+            <option value="">Arrondissement</option>
+            <option value="1">Lyon 1</option>
+            <option value="2">Lyon 2</option>
+            <option value="3">Lyon 3</option>
+            <option value="4">Lyon 4</option>
+            <option value="5">Lyon 5</option>
+            <option value="6">Lyon 6</option>
+            <option value="7">Lyon 7</option>
+            <option value="8">Lyon 8</option>
+            <option value="9">Lyon 9</option>
+        </select>
+
+        <div class="form-select">
+            <label for="start"></label>
+            <input type="date" id="start" name="date" value="2018-07-22">
+        </div>
+        <div class="boutton">
+            <label for="submit"></label>
+            <input type="submit" value="Recherchez">
+        </div>
+    </section>
+
+</form>
+<div class="banner">
+    <h1>Expositions</h1>
+</div>
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000"
+     style="margin-top: 50px;">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <h5>Expo design du 2 avril au 2 mai 2023 aux Puces du canal </h5>
+            <img src="/public/assets/images/image_artiste3.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+        </div>
+        <div class="carousel-item">
+            <h5>Vernissage le 30 mars 2023 à la Galerie Clémmouchka</5>
+            <img src="/public/assets/images/image_artiste2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+        </div>
+        <div class="carousel-item">
+            <h5>Expo temporaire du 29 mars au 10 sept 2023 au Musée des beaux arts</5>
+            <img src="/public/assets/images/book-wall-1151405_960_720.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div class="container">
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+
+
+</body>
+</html>

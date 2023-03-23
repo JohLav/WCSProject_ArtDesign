@@ -1,0 +1,32 @@
+container {
+    text-align: center;
+    margin-top: 10px;
+}
+.banner {
+    position: absolute;
+    bottom: 300px;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.banner p {
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+}
+
+
+
+h2{
+    display: flex;
+    text-align: center;
+    color: rgb(36, 75, 21);
+    justify-content: space-around;
+}
+
