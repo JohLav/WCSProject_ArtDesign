@@ -1,6 +1,11 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Bienvenue sur ArtDesign!</h1>
-    <p>Find a complete CRUD example on <a href="/home">/items</a> home.html.twig</p>  /* il me semble que la page home concerne que read et non CRUD*/
+    {% include 'Item/_carousel.html.twig' %}
+
+    <p style="font-size: 30px;">Notre site est dédié à vous fournir des informations sur les expositions d’art et design à Lyon. Passionnées par l’art et le design nous
+        voulons partager cette passion avec vous en vous aidant à devouvrir les evenements les plus interessants et
+        les plus inspirants.</p>
+
+    {% include 'Item/_cards.html.twig' %}
 {% endblock %}
