@@ -1,0 +1,37 @@
+<form action="POST">
+
+
+    <section>
+        <label for="event"></label>
+        <select id="event" name="event" class="form-select">
+            <option value="{{ item.musees }}"selected>Musées</option>
+            <option value="{{ item.expoTemporaires }}"selected>Expo temporaires</option>
+            <option value="{{ item.galeriesArt }}"selected>Galeries d'art</option>
+        </select>
+
+        <div class="form-select"></div>
+        <label for="place"></label>
+        <select class="form-select" value="{{ place }}" name="place" required aria-label="Arrondissement">
+            <option value="{{ " " }}"> Arrondissement</option>
+            <option value="{{ 1 }}">Lyon 1</option>
+            <option value="{{ 2 }}">Lyon 2</option>
+            <option value="{{ 3 }}">Lyon 3</option>
+            <option value="{{ 4 }}">Lyon 4</option>
+            <option value="{{ 5 }}">Lyon 5</option>
+            <option value="{{ 6 }}">Lyon 6</option>
+            <option value="{{ 7 }}">Lyon 7</option>
+            <option value="{{ 8 }}">Lyon 8</option>
+            <option value="{{ 9 }}">Lyon 9</option>
+        </select>
+
+        <div class="form-select">
+            <label for="start"></label>
+            <input type="date" id="start" name="date" value="{{ 2018-07-22 }}">
+        </div>
+        <div class="boutton">
+            <label for="submit"></label>
+            <input type="submit" value="{{ Recherchez }}">
+        </div>
+    </section>
+
+</form>
