@@ -6,15 +6,6 @@
 
 class UserController extends AbstractController
 {
-    public function logout()
-    {
-        if (isset($_SESSION['admin_id'])) {
-            unset($_SESSION['admin_id']);
-        }
-
-        header('Location: /');
-    }
-
     public function login(): string
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -30,5 +21,14 @@ class UserController extends AbstractController
         }
 
         return $this->twig->render('User/login.html.twig');
+    }
+
+    public function logout()
+    {
+        if (isset($_SESSION['admin_id'])) {
+            unset($_SESSION['admin_id']);
+        }
+
+        header('Location: /');
     }
 }
