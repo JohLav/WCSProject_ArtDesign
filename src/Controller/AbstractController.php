@@ -1,23 +1,27 @@
 <?php
 
-namespace App\Controller;
+    namespace App\Controller;
 
 use App\Model\UserManager;
 use Twig\Environment;
 use Twig\Extension\DebugExtension;
 use Twig\Loader\FilesystemLoader;
 
-/**
- * Initialized some Controller common features (Twig...)
- */
+
+    /**
+     * Initialized some Controller common features (Twig...)
+     */
 abstract class AbstractController
 {
     protected Environment $twig;
-    protected array|false $user;
+    protected array|false $admin;
 
-
+    /**
+     *  Initializes this class.
+     */
     public function __construct()
     {
+        session_start();
         $loader = new FilesystemLoader(APP_VIEW_PATH);
         $this->twig = new Environment(
             $loader,
@@ -28,7 +32,7 @@ abstract class AbstractController
         );
         $this->twig->addExtension(new DebugExtension());
         $userManager = new UserManager();
-        $this->user = isset($_SESSION['user_id']) ? $userManager->selectOneById($_SESSION['user_id']) : false;
-        $this->twig->addGlobal('user', $this->user);
+        $this->admin = isset($_SESSION['admin_id']) ? $userManager->selectOneById($_SESSION['admin_id']) : false;
+        $this->twig->addGlobal('admin', $this->admin);
     }
 }
