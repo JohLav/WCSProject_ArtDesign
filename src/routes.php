@@ -16,6 +16,8 @@ return [
     'logout' => ['UserController', 'logout',],
     'dashboard' => ['DashboardController', 'index',],
 
+    'place/add' => ['PlaceController', 'add',],
+    'event/add' => ['EventController', 'add',],
 
     'items' => ['ItemController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],

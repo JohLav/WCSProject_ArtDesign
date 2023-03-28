@@ -68,3 +68,11 @@ footer {
     text-align: center;
     margin-top: 50px;
 }
+
+/* Dashboard ~ STARTS */
+
+ul.sidenav-menu {
+    margin-top: 1.7rem;
+    list-style-type: none;
+}
+/* Dashboard ~ ENDS */
