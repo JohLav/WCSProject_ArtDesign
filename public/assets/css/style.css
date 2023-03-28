@@ -58,3 +58,13 @@ footer {
 .carousel {
     padding-top: auto;
 }
+
+.description{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.Title {
+    text-align: center;
+    margin-top: 50px;
+}
