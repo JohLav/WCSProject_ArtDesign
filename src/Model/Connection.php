@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Model;
+    namespace App\Model;
 
-use PDO;
+    use PDO;
 
-/**
- * This class make a PDO object instanciation.
- */
+    /**
+     * This class make a PDO object instanciation.
+     */
 class Connection
 {
     private PDO $connection;
@@ -17,13 +17,20 @@ class Connection
 
     public function __construct()
     {
-        $this->connection = new PDO(
-            'mysql:host=' . $this->host . '; dbname=' . $this->database . '; charset=utf8',
-            $this->user,
-            $this->password
-        );
+        try {
+            $this->connection = new PDO(
+                'mysql:host=' . $this->host . '; dbname=' . $this->database . '; charset=utf8',
+                $this->user,
+                $this->password
+            );
 
-        $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+            // show errors in DEV environment
+            if (ENV === 'dev') {
+                $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+            }
+        } catch (PDOException $e) {
+            echo '<div class="error">Error !: ' . $e->getMessage() . '</div>';
+        }
     }
 
     public function getconnection(): PDO
