@@ -5,7 +5,6 @@
     use PDO;
     use PDOException;
 
-
     /**
      * This class make a PDO object instanciation.
      */
