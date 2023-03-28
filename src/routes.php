@@ -10,7 +10,7 @@ return [
     '' => ['HomeController', 'index',],
     'category/museum' => ['CategoryController', 'museum',],
     'category/galerie' => ['CategoryController', 'galerie',],
-    'category/foireSalon' => ['CategoryController', 'foireSalon',],
+    'category/foiresalon' => ['CategoryController', 'foiresalon',],
     'register' => ['UserController', 'register'],
     'login' => ['UserController', 'login'],
     'logout' => ['UserController', 'logout',],
