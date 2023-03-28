@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Controller;
+    namespace App\Controller;
 
-use App\Model\ItemManager;
-use App\Model\PlaceManager;
+    use App\Model\ItemManager;
+    use App\Model\PlaceManager;
 
 class PlaceController extends AbstractController
 {
@@ -13,9 +13,9 @@ class PlaceController extends AbstractController
     public function list(): string
     {
         $placeManager = new PlaceManager();
-        $place = $placeManager->selectAll('title');
+        $places = $placeManager->selectAll('title');
 
-        return $this->twig->render('Item/index.html.twig', ['items' => $items]);
+        return $this->twig->render('Item/index.html.twig', ['places' => $places]);
     }
 
     /**
@@ -72,7 +72,7 @@ class PlaceController extends AbstractController
             $placeManager = new PlaceManager();
             $id = $placeManager->insert($place);
 
-            header('Location:/');
+            header('Location:/' . $id);
             return null;
         }
 
