@@ -76,7 +76,7 @@ class EventController extends AbstractController
             return null;
         }
 
-        return $this->twig->render('place/add.html.twig');
+        return $this->twig->render('event/add.html.twig');
     }
 
     /**
