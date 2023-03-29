@@ -1,0 +1,12 @@
+
+.qrCode {
+
+background-image: URL(2023-01-PHP-SB-Lyon-ArtDesign/public/assets/images/agenda.png);
+background-size: auto;
+}
+
+#taille { 
+
+    background-position: center;
+
+}
