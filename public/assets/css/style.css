@@ -1,3 +1,4 @@
+
 .h1, .h2, h1, h2 {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
@@ -54,6 +55,52 @@ footer {
     margin: 0;
     text-align: center;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+}
+.grid-item {
+    background-color: #007BFF;
+    padding-top: 100%;
+    /* 1:1 aspect ratio */
+    position: relative;
+}
+.grid-item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: inherit;
+}
+
+h2,h3,h4{
+
+    display: flex;
+    text-align: center;
+    color: rgb(54, 60, 52);
+    justify-content: space-around;
+}
+
+section {
+    display: flex;
+    text-align: center;
+
+}
+
+section {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
 
 .img-fluid {
     max-width: 100%;
