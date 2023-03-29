@@ -15,6 +15,7 @@ return [
     'login' => ['UserController', 'login'],
     'logout' => ['UserController', 'logout',],
     'dashboard' => ['DashboardController', 'index',],
+    'agenda' => ['HomeController', 'agenda',],
 
     'place/add' => ['PlaceController', 'add',],
     'event/add' => ['EventController', 'add',],
