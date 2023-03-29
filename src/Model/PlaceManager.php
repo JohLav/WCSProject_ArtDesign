@@ -13,13 +13,15 @@ class PlaceManager extends AbstractManager
      */
     public function insert(array $item): int
     {
-        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (`kind`,`address`,`city_code`,`city`,`phone`)
-        VALUES (:kind ,:address, :city_code, :city, :phone )");
+        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE .
+            " (`kind`,`address`,`city_code`,`city`,`phone`, `type`)
+        VALUES (:kind ,:address, :city_code, :city, :phone, :type )");
         $statement->bindValue('kind', $item['kind'], PDO::PARAM_STR);
-        $statement->bindValue('adress', $item['address'], PDO::PARAM_STR);
+        $statement->bindValue('address', $item['address'], PDO::PARAM_STR);
         $statement->bindValue('city_code', $item['city_code'], PDO::PARAM_STR);
         $statement->bindValue('city', $item['city'], PDO::PARAM_STR);
         $statement->bindValue('phone', $item['phone'], PDO::PARAM_STR);
+        $statement->bindValue('type', $item['type'], PDO::PARAM_STR);
 
 
         $statement->execute();

@@ -72,7 +72,7 @@ class PlaceController extends AbstractController
             $placeManager = new PlaceManager();
             $id = $placeManager->insert($place);
 
-            header('Location:/' . $id);
+            header('Location:/dashboard');
             return null;
         }
 
