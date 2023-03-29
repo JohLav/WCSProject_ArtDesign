@@ -9,25 +9,25 @@ use App\Model\PlaceManager;
 class EventController extends AbstractController
 {
     /**
-     * List items
+     * List event
      */
     public function list(): string
     {
-        $placeManager = new PlaceManager();
-        $events = $placeManager->selectAll('title');
+        $eventManager = new EventManager();
+        $events = $eventManager->selectAll('name_event');
 
-        return $this->twig->render('Item/index.html.twig', ['events' => $events]);
+        return $this->twig->render('event/list.html.twig', ['events' => $events]);
     }
 
     /**
-     * Show informations for a specific item a ne pas utiliser pour ArtDesign
+     * Show informations for a specific event a ne pas utiliser pour ArtDesign
      */
     public function show(int $id): string
     {
-        $itemManager = new ItemManager();
-        $item = $itemManager->selectOneById($id);
+        $eventManager = new EventManager();
+        $event = $eventManager->selectOneById($id);
 
-        return $this->twig->render('Item/show.html.twig', ['item' => $item]);
+        return $this->twig->render('event/show.html.twig', ['event' => $event]);
     }
 
     /**
@@ -75,8 +75,8 @@ class EventController extends AbstractController
             // if validation is ok, insert and redirection
             $placeManager = new EventManager();
             $id = $placeManager->insert($event);
-
-            header('Location:/dashboard');
+            $chemin = 'Location:/dashboard?id=' . $id;
+            header($chemin);
             return null;
         }
 

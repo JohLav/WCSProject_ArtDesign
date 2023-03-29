@@ -1,23 +1,21 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <h1>Connexion</h1>
-                <p>Veuillez saisir les informations de connexion.</p>
-                <form method="POST">
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Mot de passe</label>
-                        <input type="password" class="form-control" id="password" name="password">
-                    </div>
-                    <button type="submit" class="btn btn-success">Connexion</button>
-                </form>
-            </div>
+    <div class="container card">
+        <div class="card-body d-flex flex-column align-items-center">
+            <h1>Se connecter</h1>
+            <p>Veuillez saisir vos informations de connexion.</p>
+            <form action="" method="POST">
+                <div class="form-outline mb-4">
+                    <input type="email" name="email" id="form1Example1" class="form-control"/>
+                    <label class="form-label" for="form1Example1">Email</label>
+                </div>
+                <div class="form-outline mb-4">
+                    <input type="password" name="password" id="form1Example1" class="form-control"/>
+                    <label class="form-label" for="form1Example1">Mot de passe</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Connexion</button>
+            </form>
         </div>
     </div>
 {% endblock %}

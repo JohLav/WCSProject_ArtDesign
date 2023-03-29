@@ -1,8 +1,16 @@
 {# TODO : manage errors display #}
 
-<form method="post">
-	<input type="hidden" value="{{ item.id }}" name="id">
-	<label for="title">Titre</label>
-	<input type="text" value="{{ item.title }}" name="title" id="title">
-	<button type="button" class="btn btn-primary">Valider</button>
-</form>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h1>Modifier vos identifiants</h1>
+            <form method="post">
+                <input type="hidden" value="{{ item.id }}" name="id">
+                <label for="title">Titre</label>
+                <input type="text" value="{{ item.title }}" name="title" id="title">
+                <button type="button" class="btn btn-primary">Valider</button>
+            </form>
+        </div>
+    </div>
+</div>
+

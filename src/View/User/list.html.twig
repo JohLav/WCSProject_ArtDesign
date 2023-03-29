@@ -1,0 +1,27 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    {% include 'Dashboard/_sidenav.html.twig' %}
+<h1>Liste des utilisateurs</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Role</th>
+            <th>Email</th>
+            <th>Voir</th>
+            <th>Modifier</th>
+            <th>Supprimer</th>
+        </tr>
+    </thead>
+    <tbody>
+            {% for user in users %}
+                {% include 'User/show.html.twig' %}
+            {% else %}
+                <div>
+                    Il n'y a pas encore d'utilisateurs.
+                </div>
+            {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
