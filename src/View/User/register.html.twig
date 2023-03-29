@@ -1,0 +1,29 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    {% include 'Dashboard/_sidenav.html.twig' %}
+    <div class="container card">
+        <div class="card-body d-flex flex-column align-items-center">
+            <form action="" method="post">
+                <h1>Ajouter un utilisateur</h1>
+
+                <div class="form-outline mb-4">
+                    <input type="email" name="email" id="form1Example1" class="form-control"/>
+                    <label class="form-label" for="form1Example1">Email</label>
+                </div>
+                <div class="form-outline mb-4">
+                    <input type="text" name="password" id="form1Example1" class="form-control"/>
+                    <label class="form-label" for="form1Example1">Password</label>
+                </div>
+                <div class="form-outline mb-4">
+                    <input type="role" name="role" id="form1Example1" class="form-control"/>
+                    <label class="form-label" for="form1Example1">Guest</label>
+                </div>
+                <input type="submit" class="btn btn-primary btn-block" value="Ajouter" name="send">
+                <a class="link back btn btn-primary btn-block btn btn-secondary me-1 " href="/">Annuler</a>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+
