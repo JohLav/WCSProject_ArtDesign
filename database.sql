@@ -178,7 +178,7 @@ CREATE TABLE `place`
 (
     `id`        int          NOT NULL AUTO_INCREMENT,
     `kind`      varchar(200) DEFAULT NULL,
-    `adress`    varchar(255) NOT NULL,
+    `address`    varchar(255) NOT NULL,
     `city_code` varchar(5)   NOT NULL,
     `city`      varchar(100) NOT NULL,
     `phone`     int          DEFAULT NULL,
