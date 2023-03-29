@@ -11,14 +11,25 @@ return [
     'category/museum' => ['CategoryController', 'museum',],
     'category/galerie' => ['CategoryController', 'galerie',],
     'category/foiresalon' => ['CategoryController', 'foiresalon',],
+
     'register' => ['UserController', 'register'],
     'login' => ['UserController', 'login'],
     'logout' => ['UserController', 'logout',],
+    'user/list' => ['UserController', 'list',],
+    'user/show' => ['UserController', 'show', ['id']],
+    'user/edit' => ['UserController', 'edit', ['id']],
+    'user/delete' => ['UserController', 'delete', ['id']],
+
     'dashboard' => ['DashboardController', 'index',],
     'agenda' => ['HomeController', 'agenda',],
 
     'place/add' => ['PlaceController', 'add',],
+    'place/list' => ['PlaceController', 'list',],
+    'place/show' => ['PlaceController', 'show', ['id']],
     'event/add' => ['EventController', 'add',],
+    'event/list' => ['EventController', 'list',],
+    'event/show' => ['EventController', 'show', ['id']],
+
 
     'items' => ['ItemController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],

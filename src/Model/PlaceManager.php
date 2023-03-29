@@ -9,7 +9,7 @@ class PlaceManager extends AbstractManager
     public const TABLE = 'place';
 
     /**
-     * Insert new item in database
+     * Insert new place in database
      */
     public function insert(array $item): int
     {
@@ -29,7 +29,7 @@ class PlaceManager extends AbstractManager
     }
 
     /**
-     * Update item in database
+     * Update place in database
      */
     public function update(array $item): bool
     {

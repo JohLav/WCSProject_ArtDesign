@@ -1,0 +1,7 @@
+<tr>
+    <td>{{ user.role }}</td>
+    <td>{{ user.email }}</td>
+    <td ><a href="/user/show?id={{ user.id }}" alt="Voir"><i class="fas fa-eye"></i></a></td>
+    <td><a href="/user/edit?id={{ user.id }}" alt="Modifier"><i class="fas fa-edit"></i></a></td>
+    <td><a href="/user/delete?id={{ user.id }}" alt="Supprimer"><i class="fas fa-circle-xmark"></i></a></td>
+</tr>

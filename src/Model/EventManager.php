@@ -9,7 +9,7 @@ class EventManager extends AbstractManager
     public const TABLE = 'event';
 
     /**
-     * Insert new item in database
+     * Insert new event in database
      */
     public function insert(array $item): int
     {
@@ -24,4 +24,15 @@ class EventManager extends AbstractManager
         $statement->execute();
         return (int)$this->pdo->lastInsertId();
     }
+
+//    public function selectAll(string $orderBy = '', string $direction = ''): array
+//    {
+//        $query = 'SELECT event.name_event, event.date, event.place_id ' . self::TABLE .
+//            ' JOIN place as p ON p.id=event.place_id';
+//
+//        $statement = $this->pdo->prepare($query);
+//        $statement->execute();
+//
+//        return $this->pdo->query($query)->fetchAll();
+//    }
 }
