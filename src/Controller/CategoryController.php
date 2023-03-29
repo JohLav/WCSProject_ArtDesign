@@ -14,7 +14,7 @@ class CategoryController extends AbstractController
         return $this->twig->render('Item/_fond.html.twig');
     }
 
-    public function foireSalon(): string
+    public function foiresalon(): string
     {
         return $this->twig->render('Item/_decouverte.html.twig');
     }
