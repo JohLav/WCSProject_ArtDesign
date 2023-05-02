@@ -8,25 +8,25 @@
 class PlaceController extends AbstractController
 {
     /**
-     * List items
+     * List places
      */
     public function list(): string
     {
         $placeManager = new PlaceManager();
-        $places = $placeManager->selectAll('title');
+        $places = $placeManager->selectAll('type');
 
-        return $this->twig->render('Item/index.html.twig', ['places' => $places]);
+        return $this->twig->render('place/list.html.twig', ['places' => $places]);
     }
 
     /**
-     * Show informations for a specific item a ne pas utiliser pour ArtDesign
+     * Show informations for a specific place a ne pas utiliser pour ArtDesign
      */
     public function show(int $id): string
     {
-        $itemManager = new ItemManager();
-        $item = $itemManager->selectOneById($id);
+        $placeManager = new PlaceManager();
+        $place = $placeManager->selectOneById($id);
 
-        return $this->twig->render('Item/show.html.twig', ['item' => $item]);
+        return $this->twig->render('place/show.html.twig', ['place' => $place]);
     }
 
     /**
@@ -71,8 +71,8 @@ class PlaceController extends AbstractController
             // if validation is ok, insert and redirection
             $placeManager = new PlaceManager();
             $id = $placeManager->insert($place);
-
-            header('Location:/dashboard');
+            $chemin = 'Location:/dashboard?id=' . $id;
+            header($chemin);
             return null;
         }
 

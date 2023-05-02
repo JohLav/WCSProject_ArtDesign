@@ -1,15 +1,15 @@
 <?php
 
-    namespace App\Model;
+namespace App\Model;
 
-    use PDO;
+use PDO;
 
 class PlaceManager extends AbstractManager
 {
     public const TABLE = 'place';
 
     /**
-     * Insert new item in database
+     * Insert new place in database
      */
     public function insert(array $item): int
     {
@@ -29,7 +29,7 @@ class PlaceManager extends AbstractManager
     }
 
     /**
-     * Update item in database
+     * Update place in database
      */
     public function update(array $item): bool
     {
@@ -43,5 +43,17 @@ class PlaceManager extends AbstractManager
         $statement->bindValue('kind', $item['phone'], PDO::PARAM_STR);
 
         return $statement->execute();
+    }
+
+    public function search(array $search): array
+    {
+//        $query = 'SELECT * FROM ' . static::TABLE;
+        $query = 'SELECT * FROM ' . static::TABLE . ' where type =:type AND city_code =:city_code';
+
+        $statement = $this->pdo->prepare($query);
+        $statement->bindValue('type', $search["event"]);
+        $statement->bindValue('city_code', $search["place"]);
+        $statement->execute();
+        return $statement->fetchAll();
     }
 }

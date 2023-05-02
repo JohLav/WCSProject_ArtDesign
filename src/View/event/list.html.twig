@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    {% include 'Dashboard/_sidenav.html.twig' %}
+    <h1>Liste des événements</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for event in events %}
+            {% include 'event/show.html.twig' %}
+        {% else %}
+            <div>
+                Il n'y a pas encore d'événements.
+            </div>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
