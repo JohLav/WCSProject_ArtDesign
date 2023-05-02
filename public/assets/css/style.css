@@ -79,6 +79,14 @@ footer {
 }
 /* Dashboard nav ~ START */
 
+/* Dashboard ~ STARTS */
+
+ul.sidenav-menu {
+    margin-top: 1.7rem;
+    list-style-type: none;
+}
+/* Dashboard ~ ENDS */
+
 section #sidenav .p-4 {
     border-radius: .5rem .5rem 0 0;
     position: relative;

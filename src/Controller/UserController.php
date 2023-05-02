@@ -36,7 +36,7 @@ class UserController extends AbstractController
             $admin = $userManager->selectOneByEmail($credentials['email']);
             if ($admin && password_verify($credentials['password'], $admin['password'])) {
                 $_SESSION['admin_id'] = $admin['id'];
-                header('Location: /');
+                header('Location: /dashboard');
                 exit();
             }
         }

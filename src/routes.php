@@ -10,12 +10,15 @@ return [
     '' => ['HomeController', 'index',],
     'category/museum' => ['CategoryController', 'museum',],
     'category/galerie' => ['CategoryController', 'galerie',],
-    'category/foireSalon' => ['CategoryController', 'foireSalon',],
+    'category/foiresalon' => ['CategoryController', 'foiresalon',],
     'register' => ['UserController', 'register'],
     'login' => ['UserController', 'login'],
     'logout' => ['UserController', 'logout',],
     'dashboard' => ['DashboardController', 'index',],
+    'agenda' => ['HomeController', 'agenda',],
 
+    'place/add' => ['PlaceController', 'add',],
+    'event/add' => ['EventController', 'add',],
 
     'items' => ['ItemController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],

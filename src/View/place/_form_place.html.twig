@@ -1,0 +1,42 @@
+{# TODO : manage errors display #}
+<div class="container card">
+        <div class="card-body d-flex flex-column align-items-center">
+            <form method="POST">
+                <h1>Ajouter un lieu</h1>
+                <div class="form-outline mb-4">
+                    <input type="text" class="form-control" name="kind" id="form1Example1" required>
+                    <label class="form-label" for="form1Example1">Type</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <input type="address" class="form-control" id="address" name="address" required>
+                    <label class="form-label" for="form1Example1">Adresse</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <input maxlength="5" class="form-control" type="text" id="city_code" name="city_code" required>
+                    <label class="form-label" for="form1Example1">Code postal</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <input type="text" class="form-control" id="city" name="city" required>
+                    <label class="form-label" for="form1Example1">Ville</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <input type="text" class="form-control" id="phone" name="phone" required>
+                    <label class="form-label" for="form1Example1">Téléphone</label>
+                </div>
+
+                <select class="form-select mb-4" name="type" id="type">
+                    <option value="Museum">Musée</option>
+                    <option value="Galery">Galerie</option>
+                    <option value="Exposition">Exposition</option>
+                </select>
+
+                <button class="btn btn-primary" type="submit">Envoyer</button>
+
+            </form>
+        </div>
+</div>
+

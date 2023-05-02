@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Model\EventManager;
 use App\Model\ItemManager;
 use App\Model\PlaceManager;
 
@@ -62,21 +63,24 @@ class EventController extends AbstractController
      */
     public function add(): ?string
     {
+        $planeMnager = new PlaceManager();
+        $places = $planeMnager->selectAll();
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // clean $_POST data
-            $place = array_map('trim', $_POST);
+            $event = array_map('trim', $_POST);
 
             // TODO validations (length, format...)
 
             // if validation is ok, insert and redirection
-            $placeManager = new PlaceManager();
-            $id = $placeManager->insert($place);
+            $placeManager = new EventManager();
+            $id = $placeManager->insert($event);
 
-            header('Location:/' . $id);
+            header('Location:/dashboard');
             return null;
         }
 
-        return $this->twig->render('place/add.html.twig');
+        return $this->twig->render('event/add.html.twig', ['places' => $places]);
     }
 
     /**
